@@ -1,7 +1,16 @@
-import { Heading } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import { HeaderComponent } from "./components/HeaderComponent";
 
 export default function Home() {
   return (
-    <Heading>hello world</Heading>
+    <Box 
+      as="main" 
+      maxW="full" 
+      minH="100dvh" 
+      bgColor={{ base: 'white', _dark: 'gray.950' }}
+      p={{ base: '1.5rem', md: '3rem' }}
+    >
+      <HeaderComponent />
+    </Box>
   );
 }
