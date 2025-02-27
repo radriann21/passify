@@ -29,6 +29,7 @@ export const createPasswordStore = (initState: PasswordState = defaultInitialSta
       const numbersChars = "0123456789"
       const symbolsChars = "!@#$%^&*()_+-=[]{}|;:,.<>/?"
 
+
       if (uppercase) chars += uppercaseChars
       if (lowercase) chars += lowercaseChars
       if (numbers) chars += numbersChars

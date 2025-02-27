@@ -12,7 +12,7 @@ export interface PasswordStoreProviderProps {
   children: ReactNode
 }
 
-export const PasswordStoreProvder = ({ children }: PasswordStoreProviderProps) => {
+export const PasswordStoreProvider = ({ children }: PasswordStoreProviderProps) => {
   const storeRef = useRef<PasswordStoreApi>(null)
   if (!storeRef.current) {
     storeRef.current = createPasswordStore(initPasswordStore())

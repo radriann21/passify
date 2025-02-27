@@ -1,4 +1,5 @@
 import { Flex, Heading, Box, Text, Mark } from "@chakra-ui/react"
+import { PasswordInput } from "./PasswordInput"
 
 export const PasswordContainer = () => {
   return (
@@ -9,6 +10,7 @@ export const PasswordContainer = () => {
       mt="2rem"
       justifyContent="center"
       alignItems="center"
+      flexDir="column"
     >
       <Box
         w="50%"
@@ -20,9 +22,10 @@ export const PasswordContainer = () => {
           <Mark color="blue.500" fontStyle="italic">ify</Mark>
         </Heading>
         <Text>
-          Genera contraseñas seguras con facilidad y rapidez, obten una evaluación inmediata de la fortaleza y ten la confianza de usarla.
+          Generate strong passwords quickly and easily, get an immediate assessment of their strength, and have the confidence to use them.
         </Text>
       </Box>
+      <PasswordInput />
     </Flex>
   )
 }
