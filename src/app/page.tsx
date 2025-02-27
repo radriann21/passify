@@ -1,5 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import { HeaderComponent } from "./components/HeaderComponent";
+import { PasswordContainer } from "./components/PasswordContainer";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       p={{ base: '1.5rem', md: '3rem' }}
     >
       <HeaderComponent />
+      <PasswordContainer />
     </Box>
   );
 }
