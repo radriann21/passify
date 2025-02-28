@@ -11,7 +11,7 @@ export type PasswordActions = {
 export type PasswordStore = PasswordState & PasswordActions
 
 export const defaultInitialState: PasswordState = {
-  password: ""
+  password: "",
 }
 
 export const initPasswordStore = (): PasswordState => {
@@ -29,7 +29,6 @@ export const createPasswordStore = (initState: PasswordState = defaultInitialSta
       const numbersChars = "0123456789"
       const symbolsChars = "!@#$%^&*()_+-=[]{}|;:,.<>/?"
 
-
       if (uppercase) chars += uppercaseChars
       if (lowercase) chars += lowercaseChars
       if (numbers) chars += numbersChars
@@ -41,7 +40,6 @@ export const createPasswordStore = (initState: PasswordState = defaultInitialSta
         const randomIndex = Math.floor(Math.random() * chars.length)
         generatedPassword += chars[randomIndex]
       }
-
       set({ password: generatedPassword })
     }
   }))

@@ -7,13 +7,13 @@ export const PasswordContainer = () => {
       as="section"
       w="full"
       minH="full"
-      mt="2rem"
+      mt="1.5rem"
       justifyContent="center"
       alignItems="center"
       flexDir="column"
     >
       <Box
-        w="50%"
+        w={{base:"100%", lg:"50%"}}
         textAlign="center"
         spaceY=".5rem"
       >
