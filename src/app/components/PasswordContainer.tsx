@@ -13,7 +13,7 @@ export const PasswordContainer = () => {
       flexDir="column"
     >
       <Box
-        w={{base:"100%", lg:"50%"}}
+        w={{base:"100%", md:"50%"}}
         textAlign="center"
         spaceY=".5rem"
       >
