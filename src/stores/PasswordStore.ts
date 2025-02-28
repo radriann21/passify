@@ -1,7 +1,9 @@
 import { createStore } from "zustand/vanilla";
+import { evaluateStrength } from "@/utils/evaluatePasswordStrength";
 
 export type PasswordState = {
-  password: string
+  password: string,
+  strength: number
 }
 
 export type PasswordActions = {
@@ -12,10 +14,11 @@ export type PasswordStore = PasswordState & PasswordActions
 
 export const defaultInitialState: PasswordState = {
   password: "",
+  strength: 0
 }
 
 export const initPasswordStore = (): PasswordState => {
-  return { password: "" }
+  return { password: "", strength: 0 }
 }
 
 export const createPasswordStore = (initState: PasswordState = defaultInitialState) => {
@@ -40,7 +43,7 @@ export const createPasswordStore = (initState: PasswordState = defaultInitialSta
         const randomIndex = Math.floor(Math.random() * chars.length)
         generatedPassword += chars[randomIndex]
       }
-      set({ password: generatedPassword })
+      set({ password: generatedPassword, strength: evaluateStrength(generatedPassword) })
     }
   }))
 }
